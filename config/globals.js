@@ -9,23 +9,6 @@ const oAuthRefreshToken = process.env.OAUTH_REFRESH_TOKEN;
 const oAuthAccessToken = process.env.OAUTH_ACCESS_TOKEN; 
 const personal = process.env.EMAILPERSONAL;
 
-const safeUsrnameSqlLetters = [
-    '-', '_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-    'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
-    'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
-    'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
-    'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' ',
-  ];
-  
-  
-const safePwdSqlLetters = [
-    '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', 'a',
-    'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-    'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A',
-    'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
-    'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1',
-    '2', '3', '4', '5', '6', '7', '8', '9', '0'
-  ];
 
 const numOfHashes = 14; 
 const secureKey = process.env.SECURE_KEY;
@@ -43,8 +26,6 @@ module.exports = {
     oAuthAccessToken,
     frontEndUrl,
     personal,
-    safeUsrnameSqlLetters,
-    safePwdSqlLetters,
     numOfHashes,
     secureKey,
     tokenOptionExpiration,

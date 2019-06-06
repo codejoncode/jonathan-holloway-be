@@ -5,15 +5,20 @@ const bcrypt = require('bcryptjs');
 const uuidv4 = require('uuid/v4'); 
 const db = require('../db/models/usersDB.js');
 
+const {
+  authenticate, 
+  generateToken,
+
+} = require("../config/middleware/authenticate.js");
+
+const requestClientIP = require('../config/middleware/requestClientIp.js');
 
 const {
-    safeUsrnameSqlLetters,
-    safePwdSqlLetters,
     numOfHashes,
 } = "../config/globals.js";
 
 
-router.post("/register", (req, res) => {
+router.post("/register", requestClientIP, (req, res) => {
  /*Hash the passwords*/
   const credentials = req.body; 
   console.log(credentials)
@@ -34,7 +39,9 @@ router.post("/login", async (req,res) => {
   if (!user || !bcrypt.compareSync(credentials.password, user.password)){
       return res.status(401).json({error: 'Incorrect credntials'});
   } else {
-      return res.status(200).json({success: "Successfully logged in"});
+      const token = await generateToken(user.username, '100d');
+
+      return res.status(200).json({token});
   }
 })
 
