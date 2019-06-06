@@ -7,12 +7,13 @@ const {
 const { usersDB} = require("../../db/models/usersDB.js");
 const jwt = require('jsonwebtoken');
 
-const generateToken = async ( username, expiration) => {
+const generateToken = async ( username, id, expiration) => {
     let tomorrow = await new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     const totalHours = tomorrow.getTime() / 1000 / 3600;
     let payload = {
       username,
+      id,
       total_hours: totalHours
     };
   

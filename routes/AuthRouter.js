@@ -1,12 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcryptjs');
-const uuidv4 = require('uuid/v4'); 
+const bcrypt = require('bcryptjs'); 
 const db = require('../db/models/usersDB.js');
 
 const {
-  authenticate, 
   generateToken,
 
 } = require("../config/middleware/authenticate.js");
@@ -39,7 +37,7 @@ router.post("/login", async (req,res) => {
   if (!user || !bcrypt.compareSync(credentials.password, user.password)){
       return res.status(401).json({error: 'Incorrect credntials'});
   } else {
-      const token = await generateToken(user.username, '100d');
+      const token = await generateToken(user.username, user.id, '100d');
 
       return res.status(200).json({token});
   }

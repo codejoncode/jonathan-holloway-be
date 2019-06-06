@@ -3,6 +3,10 @@ const express = require("express");
 const blogsDB = require("../db/models/blogsDB.js");
 const router = express.Router();
 
+const {
+  authenticate, 
+} = require("../config/middleware/authenticate.js");
+
 //may want to bring in a helper to authenticate for posts only done by one user edit only by one user  everyone else can view
 
 router.get("/", (req, res) => {
