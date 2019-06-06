@@ -22,7 +22,8 @@ server.get("/", (req, res) => {
 const {
   usersRouter, 
   emailsRouter,
-  blogsRouter
+  blogsRouter,
+  authRouter,
 } = require('./routes/index.js');
 
 // REQUIRE THE ROUTES FROM INDEX.JS IN ROUTES FOLDER 
@@ -32,5 +33,6 @@ const {
 server.use('/blogs', blogsRouter);
 server.use('/emails', emailsRouter);
 server.use('/users', usersRouter); 
+server.use('/auth', authRouter);
 
 module.exports = server; 
