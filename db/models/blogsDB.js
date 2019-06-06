@@ -1,14 +1,14 @@
 const db = require('../../dbCongig');
 
-const getBlogPosts = () => {
-    return db('blogs');
 
+/*So each  method will return the posts because I want to update the state on the frontend with the most current information */
+const getBlogPosts = () => {
+    return db('blogs').orderBy('id', 'desc');
 }
 
 const addBlogPost = async (blog) => {
     await db('blogs').insert(blog);
     return getBlogPosts();
-
 }
 
 const editBlogPost = async (changes, id) => {
@@ -18,8 +18,12 @@ const editBlogPost = async (changes, id) => {
      return getBlogPosts(); 
 }
 
-const deleteBlogPost = () => {
-
+const deleteBlogPost = async (id) => {
+    console.log("getting in here at all?")
+    await db("blogs")
+    .where({ id })
+    .del()
+    return getBlogPosts(); 
 }
 
 module.exports = {
