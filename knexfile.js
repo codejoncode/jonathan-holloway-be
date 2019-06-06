@@ -13,7 +13,7 @@ const localPg = {
 const dbConnection = process.env.DATABASE_URL || localPg; 
 
 const dbSettings = {
-  client: 'pg',
+  client: 'postgresql',
   connection: dbConnection,
   pool: {
     min: 2,
