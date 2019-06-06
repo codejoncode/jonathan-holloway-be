@@ -7,7 +7,7 @@ const oAuthClientId = process.env.OAUTH_CLIENT_ID;
 const oAuthClientSecret = process.env.OAUTH_CLIENT_SECRET; 
 const oAuthRefreshToken = process.env.OAUTH_REFRESH_TOKEN;
 const oAuthAccessToken = process.env.OAUTH_ACCESS_TOKEN; 
-const personal = process.env.EMAILPERSONAL
+const personal = process.env.EMAILPERSONAL;
 
 module.exports = {
     nodeMailerHost,
