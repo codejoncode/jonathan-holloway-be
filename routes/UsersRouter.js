@@ -11,4 +11,6 @@ router.get("/", (req, res) => {
    .catch(err => res.status(500).json({error: `Failed to get users ${err}`}))
 })
 
+
+
 module.exports = router; 
