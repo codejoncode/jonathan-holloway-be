@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const usersDB = require('../db/models/usersDB.js');
 const router = express.Router();
-console.log(usersDB)
+
 
 router.get("/", (req, res) => {
   return usersDB

@@ -27,11 +27,12 @@ router.put("/:id", (req, res) => {
   return blogsDB
     .editBlogPost(changes, id)
     .then(results => res.status(200).json(results))
-    .catch(err => res.status(500).json({ error: `Failed to edit post ${err}` }));
+    .catch(err =>
+      res.status(500).json({ error: `Failed to edit post ${err}` })
+    );
 });
 
 router.delete("/:id", (req, res) => {
- console.log("here ")
   const { id } = req.params;
   return blogsDB
     .deleteBlogPost(id)
@@ -42,7 +43,9 @@ router.delete("/:id", (req, res) => {
         res.status(404).json({ error: "Not found nothing deleted" });
       }
     })
-    .catch(err => res.status(500).json({ error: `Failed to delete post ${err}` }));
+    .catch(err =>
+      res.status(500).json({ error: `Failed to delete post ${err}` })
+    );
 });
 
 module.exports = router;
