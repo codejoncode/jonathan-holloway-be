@@ -10,14 +10,6 @@ const {
     getMailOptions 
  } = require('../config/nodeMailerConfig.js')
 
-// router.get("/", (req, res) => {
-//   return emailsDB
-//     .getEmails()
-//     .then(results => res.status(200).json(results))
-//     .catch(err =>
-//       res.status(500).json({ error: `Failed to get emails ${err}` })
-//     );
-// });
 
 router.post("/send", requestClientIp, (req, res) => {
   const { message, email, company, name, clientIp } = req.body;

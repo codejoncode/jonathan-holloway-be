@@ -4,7 +4,7 @@ const blogsDB = require("../db/models/blogsDB.js");
 const router = express.Router();
 
 const {
-  authenticate, 
+  validateToken, 
 } = require("../config/middleware/authenticate.js");
 
 //may want to bring in a helper to authenticate for posts only done by one user edit only by one user  everyone else can view
@@ -18,14 +18,14 @@ router.get("/", (req, res) => {
     );
 });
 
-router.post("/", (req, res) => {
+router.post("/", validateToken, (req, res) => {
   return blogsDB
     .addBlogPost(req.body)
     .then(results => res.status(200).json(results))
     .catch(err => res.status(500).json({ error: `Failed to add post ${err}` }));
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:id", validateToken, (req, res) => {
   const { id } = req.params;
   const changes = req.body;
   return blogsDB
@@ -36,7 +36,7 @@ router.put("/:id", (req, res) => {
     );
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id",validateToken, (req, res) => {
   const { id } = req.params;
   return blogsDB
     .deleteBlogPost(id)

@@ -49,35 +49,6 @@ const generateToken = async ( username, id, expiration) => {
       : token;
   };
   
-  // authenticate that the user making the request is the same one whos info is being requested
-  // (e.g. you cannot request a different user's profile info)
-  function authenticate(req, res, next) {
-    const token = req.get('Authorization');
-    if (!token) {
-      return res.status(401).json({
-        error: 'No token provided. It must be set on the Authorization Header.'
-      });
-    }
-    return jwt.verify(token, secureKey, async (err, decoded) => {
-      if (err)
-        return res
-          .status(401)
-          .json({ error: 'Your login has expired. Please sign in again.' });
-      req.decoded = decoded;
-      const requestingUserID = req.params.user_id;
-      const loggedInUserID = '' + req.decoded.id;
-      const currentUser = await usersDB.getUserName(req.decoded.id);
-      if (currentUser) {
-        if (req.decoded.username !== currentUser.username) {
-          return res.status(401).json({ error: 'You need to delete localStorage.' });
-        }
-      } else return res.status(401).json({ error: 'Not authorized.' });
-      if (requestingUserID !== loggedInUserID) {
-        return res.status(401).json({ error: 'Not authorized.' });
-      }
-      next();
-    });
-  };
   
   function validateToken(req, res, next) {
     const token = req.get('Authorization');
@@ -96,43 +67,10 @@ const generateToken = async ( username, id, expiration) => {
     });
   };
   
-  function authorize(req, res, next) {
-    // the auth token is normally sent in the authorization header
-    const token = req.headers.authorization;
-    const secret =
-      process.env.JWT_SECRET ||
-      'Should configure local .env file for secretString';
-  
-    // Token is provided
-    if (token) {
-      jwt.verify(token, secret, async (err, decodedToken) => {
-        // Token is not valid
-        if (err) {
-          res.status(401).json({ message: 'invalid token' });
-        } else {
-          req.decodedToken = decodedToken;
-          let userInCheck = await usersDB.getUserDetails(req.decodedToken.id);
-  
-          // user is banned
-          if (
-            accountStatusTypes[accountStatusTypes.length - 1] ===
-            userInCheck.status
-          ) {
-            next();
-          } else {
-            res.status(403).json({ message: 'user is banned' });
-          }
-        }
-      });
-    } else {
-      res.status(401).json({ message: 'no token provided' });
-    }
-  }
+ 
   
   module.exports = {
-    authenticate,
-    authorize,
+  
     generateToken,
-    refreshTokenAsNeeded,
     validateToken,
   };
