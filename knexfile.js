@@ -1,5 +1,20 @@
 // Update with your config settings.
 require('dotenv').config();
+const {Client } = require('pg');
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
+
+client.connect();
+
+client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+  client.end();
+});
 
 const localPg = {
   host: process.env.HOST,
@@ -13,7 +28,7 @@ const localPg = {
 const dbConnection = process.env.DATABASE_URL || localPg; 
 
 const dbSettings = {
-  client: 'postgresql',
+  client:  'pg',
   connection: dbConnection,
   pool: {
     min: 2,
