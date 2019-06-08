@@ -20,7 +20,7 @@ router.post("/send", requestClientIp, (req, res) => {
   const { message, email, company, name, clientIp } = req.body;
   if (name.length < 3) {
     return res.status(409).json({error: "Please enter a valid name"}, this.handleOpen())
-  } else if (text.length < 15 ) {
+  } else if (message.length < 15 ) {
     return res.status(409).json({error: "Your message seems a bit slim."}, this.handleOpen())
   } else if ((company.length < 4)){
     return res.status(409).json({error: "Please enter your company name"}, this.handleOpen())
