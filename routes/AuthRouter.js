@@ -19,7 +19,7 @@ const {
 router.post("/register", requestClientIP, (req, res) => {
  /*Hash the passwords*/
   const credentials = req.body; 
-  if (req.body.username !== mrHollowaySE){
+  if (req.body.username !== "mrHollowaySE"){
     return res.status(401).json({error: "Only the developer of this application is permitted to register. Backend was only created for emailing and blog purposes."})
  }
 
@@ -36,7 +36,7 @@ router.post("/login", async (req,res) => {
   let user = await db.getUserByUsername(req.body.username);  // returns an array 
   user = user[0]; 
   const credentials = req.body;
-  if (req.body.username !== mrHollowaySE){
+  if (req.body.username !== "mrHollowaySE"){
     return res.status(401).json({error: "Only the developer of this application is permitted to login. Backend was only created for emailing and blog purposes."})
  }
   if (!user || !bcrypt.compareSync(credentials.password, user.password)){
