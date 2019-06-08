@@ -61,7 +61,7 @@ const generateToken = async ( username, id, expiration) => {
       if (err)
         return res
           .status(401)
-          .json({ error: 'Your login has expired. Please sign in again.' });
+          .json({ error: `Your login has expired. Please sign in again. ${err}` });
       req.decoded = decoded;
       next();
     });
