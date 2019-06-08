@@ -31,23 +31,28 @@ router.post("/register", requestClientIP, (req, res) => {
     .catch(err => res.status(500).json({error: `Failed register user ${err}`}))
 });
 
-router.post("/login", async (req,res) => {
-  /*find the user in the database by it's user name then  */
-  let user = await db.getUserByUsername(req.body.username);  // returns an array 
-  user = user[0]; 
-  const credentials = req.body;
-  if (req.body.username !== "mrHollowaySE"){
-    return res.status(401).json({error: "Only the developer of this application is permitted to login. Backend was only created for emailing and blog purposes."})
- }
-  if (!user || !bcrypt.compareSync(credentials.password, user.password)){
-      return res.status(401).json({error: 'Incorrect credntials'});
-  } else {
-      const token = await generateToken(user.username, user.id, '100d');
+// router.post("/login", async (req,res) => {
+//   /*find the user in the database by it's user name then  */
+//   let user = await db.getUserByUsername(req.body.username);  // returns an array 
+//   try {
+//       user = user[0]; 
+//       const credentials = req.body;
+//       if (req.body.username !== "mrHollowaySE"){
+//         return res.status(401).json({error: "Only the developer of this application is permitted to login. Backend was only created for emailing and blog purposes."})
+//      }
+//       if (!user || !bcrypt.compareSync(credentials.password, user.password)){
+//           return res.status(401).json({error: 'Incorrect credntials'});
+//       } else {
+//           const token = await generateToken(user.username, user.id, '100d');
+    
+//           return res.status(200).json({token});
+//       }
 
-      return res.status(200).json({token});
-  }
+//   } catch (error) {
+//     return res.status(500).json({err: `Problem getting the login to work ${error}`})
+//   }
 
   
-})
+// })
 
 module.exports = router; 
