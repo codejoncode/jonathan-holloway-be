@@ -4,6 +4,10 @@ const db = require("../../dbCongig");
 const getBlogPosts = () => {
   return db("blogs").orderBy("id", "desc");
 };
+const getBlogById = (id) => {
+  return db("blogs")
+    .where({id})
+}
 
 const addBlogPost = async blog => {
   await db("blogs").insert(blog);
@@ -28,5 +32,6 @@ module.exports = {
   getBlogPosts,
   addBlogPost,
   editBlogPost,
-  deleteBlogPost
+  deleteBlogPost,
+  getBlogById,
 };

@@ -3,9 +3,7 @@ const express = require("express");
 const blogsDB = require("../db/models/blogsDB.js");
 const router = express.Router();
 
-const {
-  validateToken, 
-} = require("../config/middleware/authenticate.js");
+const { validateToken } = require("../config/middleware/authenticate.js");
 
 //may want to bring in a helper to authenticate for posts only done by one user edit only by one user  everyone else can view
 
@@ -15,6 +13,16 @@ router.get("/", (req, res) => {
     .then(results => res.status(200).json(results))
     .catch(err =>
       res.status(500).jsoon({ error: `Failed to get blog posts ${err}` })
+    );
+});
+
+router.get("/:id", (req, res) => {
+  const { id } = req.params;
+  return blogsDB
+    .getBlogById(id)
+    .then(results => res.status(200).json(results))
+    .catch(err =>
+      res.status(500).json({ error: `Failed to get blog by id ${err}` })
     );
 });
 
@@ -36,7 +44,7 @@ router.put("/:id", validateToken, (req, res) => {
     );
 });
 
-router.delete("/:id",validateToken, (req, res) => {
+router.delete("/:id", validateToken, (req, res) => {
   const { id } = req.params;
   return blogsDB
     .deleteBlogPost(id)
