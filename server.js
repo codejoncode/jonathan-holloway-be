@@ -25,6 +25,7 @@ const {
   blogsRouter,
   authRouter,
   projectsRouter,
+  lecturesRouter
 } = require('./routes/index.js');
 
 // REQUIRE THE ROUTES FROM INDEX.JS IN ROUTES FOLDER 
@@ -35,6 +36,7 @@ server.use('/blogs', blogsRouter);
 server.use('/emails', emailsRouter);
 server.use('/users', usersRouter); 
 server.use('/auth', authRouter);
-server.use ("/projects", projectsRouter)
+server.use ("/projects", projectsRouter);
+server.use("/lectures", lecturesRouter);
 
 module.exports = server; 
