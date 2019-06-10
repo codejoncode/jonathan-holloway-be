@@ -9,7 +9,7 @@ const projects = [
       "https://github.com/labs11-social-board/labs11_social_boardFE, https://github.com/labs11-social-board/labs11_social_boardBE",
     description:
       "Symposium is a 5-week project where I worked with 4 other developers on an existing codebase to add functionality and features.",
-    technologies: "React Redux PostgreSql FullStack, sql Express",
+    technologies: "React Redux PostgreSql FullStack sql Express",
     image: "https://i.ibb.co/SBzsBzw/Symposium.png",
     gif: "https://gfycat.com/zealousdecentandeancat"
   },
@@ -40,7 +40,7 @@ const projects = [
       "https://github.com/codejoncode/LambdaMUD-Project, https://github.com/codejoncode/LambdaMUD-Client",
     description:
       "Another four-day project to test my knowledge of Python and Django at Lambda School. This is a full stack project with Django on the backend and React on the frontend.",
-    technologies: "python django JavaScript React FullStack sql ",
+    technologies: "python django JavaScript React FullStack sql",
     image: "https://i.ibb.co/d2Np2cJ/lambda-Mud.png",
     gif: "https://gfycat.com/gloomyportlyincatern"
   },
