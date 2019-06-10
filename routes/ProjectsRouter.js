@@ -1,62 +1,60 @@
 require("dotenv").config();
 const express = require("express");
-const blogsDB = require("../db/models/blogsDB.js");
+const projectsDB = require("../db/models/projectsDB.js");
 const router = express.Router();
 
 const { validateToken } = require("../config/middleware/authenticate.js");
 
-//may want to bring in a helper to authenticate for posts only done by one user edit only by one user  everyone else can view
-
 router.get("/", (req, res) => {
-  return blogsDB
-    .getBlogPosts()
+  return projectsDB
+    .getProjects()
     .then(results => res.status(200).json(results))
     .catch(err =>
-      res.status(500).json({ error: `Failed to get blog posts ${err}` })
+      res.status(500).json({ error: `Failed to get projects ${err}` })
     );
 });
 
 router.get("/:id", (req, res) => {
   const { id } = req.params;
-  return blogsDB
-    .getBlogById(id)
+  return projectsDB
+    .getProjectById(id)
     .then(results => res.status(200).json(results))
     .catch(err =>
-      res.status(500).json({ error: `Failed to get blog by id ${err}` })
+      res.status(500).json({ error: `Failed to get project by id ${err}` })
     );
 });
 
 router.post("/", validateToken, (req, res) => {
-  return blogsDB
-    .addBlogPost(req.body)
+  return projectsDB
+    .addProject(req.body)
     .then(results => res.status(200).json(results))
-    .catch(err => res.status(500).json({ error: `Failed to add post ${err}` }));
+    .catch(err =>
+      res.status(500).json({ error: `Failed to add project ${err}` })
+    );
 });
 
 router.put("/:id", validateToken, (req, res) => {
   const { id } = req.params;
   const changes = req.body;
-  return blogsDB
-    .editBlogPost(changes, id)
+  return projectsDB
+    .editProject(changes, id)
     .then(results => res.status(200).json(results))
     .catch(err =>
-      res.status(500).json({ error: `Failed to edit post ${err}` })
+      res.status(500).json({ error: `Failed to edit project ${err}` })
     );
 });
 
 router.delete("/:id", validateToken, (req, res) => {
   const { id } = req.params;
-  return blogsDB
-    .deleteBlogPost(id)
+  return projectsDB
+    .deleteProject(id)
     .then(count => {
       if (count) {
         res.status(200).json(count);
-      } else {
-        res.status(404).json({ error: "Not found nothing deleted" });
       }
     })
     .catch(err =>
-      res.status(500).json({ error: `Failed to delete post ${err}` })
+      res.status(500).json({ erro: `Failed to delete project ${err}` })
     );
 });
 

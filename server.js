@@ -34,5 +34,6 @@ server.use('/blogs', blogsRouter);
 server.use('/emails', emailsRouter);
 server.use('/users', usersRouter); 
 server.use('/auth', authRouter);
+server.use ("/projects", projectsRouter)
 
 module.exports = server; 
