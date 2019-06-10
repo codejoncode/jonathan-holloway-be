@@ -24,6 +24,7 @@ const {
   emailsRouter,
   blogsRouter,
   authRouter,
+  projectsRouter,
 } = require('./routes/index.js');
 
 // REQUIRE THE ROUTES FROM INDEX.JS IN ROUTES FOLDER 
