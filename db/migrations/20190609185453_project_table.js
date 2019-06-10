@@ -8,6 +8,7 @@ exports.up = function(knex, Promise) {
         tbl.string("technologies", 2000)
         tbl.string("image")
         tbl.string("gif")
+        tbl.string("gifPlay")
         tbl.string("githubUrl")
         tbl.string("plan")
         tbl.string("deployUrl")

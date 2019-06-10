@@ -11,7 +11,8 @@ const projects = [
       "Symposium is a 5-week project where I worked with 4 other developers on an existing codebase to add functionality and features.",
     technologies: "React Redux PostgreSql FullStack sql Express",
     image: "https://i.ibb.co/SBzsBzw/Symposium.png",
-    gif: "https://gfycat.com/zealousdecentandeancat"
+    gif: "https://gfycat.com/zealousdecentandeancat",
+    gifPlay: "https://gfycat.com/ifr/ZealousDecentAndeancat"
   },
 
   {
@@ -27,7 +28,8 @@ const projects = [
       "Four-day frontend project designed to test the React and Redux skills learned at Lambda. The backend was later implemented after 4 weeks of studies with Lambda with another 4 days of work after assignment. This was my first full stack application.  Many features added on top of the original requirement. I had a lot of fun and perhaps realized this is the career I wanted during the creation of this project. ",
     technologies: "JavaScript Express Redux FullStack sql",
     image: "https://i.ibb.co/HgHYCyb/note-Taking-App.png",
-    gif: "https://gfycat.com/hilariousanyarabianoryx"
+    gif: "https://gfycat.com/hilariousanyarabianoryx",
+    gifPlay: "https://gfycat.com/ifr/HilariousAnyArabianoryx",
   },
 
   {
@@ -42,7 +44,8 @@ const projects = [
       "Another four-day project to test my knowledge of Python and Django at Lambda School. This is a full stack project with Django on the backend and React on the frontend.",
     technologies: "python django JavaScript React FullStack sql",
     image: "https://i.ibb.co/d2Np2cJ/lambda-Mud.png",
-    gif: "https://gfycat.com/gloomyportlyincatern"
+    gif: "https://gfycat.com/gloomyportlyincatern",
+    gifPlay: "https://gfycat.com/ifr/GloomyPortlyIncatern"
   },
 
   {
@@ -55,7 +58,8 @@ const projects = [
       "Lambda Treasure Hunt is a project with Django on the backend, and React on the frontend that illustrates graph traversal. Implemented the ability to travel to any given room using breadth-first search. Automated exploration to traverse the world and build a map. Map building Generate a graphical representation of the world map",
     technologies: "React JavaScript bootstrap sigma Algorithms",
     image: "https://i.ibb.co/5xv5cHX/Lambda-Treasure-Hunt.png",
-    gif: "https://gfycat.com/singleweepyasp"
+    gif: "https://gfycat.com/singleweepyasp",
+    gifPlay: "https://gfycat.com/ifr/SingleWeepyAsp",
   },
 
   {
@@ -68,7 +72,8 @@ const projects = [
       "Application to go over React router and displaying components in React.",
     technologies: "React  JavaScript",
     image: "https://i.ibb.co/W03FZs5/basketball-League.png",
-    gif: "https://gfycat.com/rewardingrepulsivegermanpinscher"
+    gif: "https://gfycat.com/rewardingrepulsivegermanpinscher",
+    gifPlay : "https://gfycat.com/ifr/RewardingRepulsiveGermanpinscher"
   },
 
   {
@@ -80,7 +85,8 @@ const projects = [
     description: "an application of the classic game of Sudoku",
     technologies: "JavaScript React Algorithms",
     image: "https://i.ibb.co/fCXdBYV/sudoku.png",
-    gif: "https://gfycat.com/welldocumentedkindisabellineshrike"
+    gif: "https://gfycat.com/welldocumentedkindisabellineshrike",
+    gifPlay: "https://gfycat.com/ifr/WelldocumentedKindIsabellineshrike",
   },
 
   {
@@ -94,7 +100,8 @@ const projects = [
       "application in which users will be able to run different 'Game of Life' scenarios",
     technologies: "React JavaScript algorithms",
     image: "https://i.ibb.co/y4DPTyv/conways-Game.png",
-    gif: "https://gfycat.com/bouncygargantuanhammerkop"
+    gif: "https://gfycat.com/bouncygargantuanhammerkop",
+    gifPlay: "https://gfycat.com/ifr/BouncyGargantuanHammerkop",
   },
 
   {
@@ -108,7 +115,8 @@ const projects = [
       "Followed a design and implemented the application. Using Less CSS and HTML.",
     technologies: "LESS JavaScript Design",
     image: "https://i.ibb.co/k3zDSFG/ui-design.png",
-    gif: "https://gfycat.com/orangedeafeninggodwit"
+    gif: "https://gfycat.com/orangedeafeninggodwit",
+    gifPlay: "https://gfycat.com/ifr/OrangeDeafeningGodwit",
   },
 
   {
@@ -119,7 +127,8 @@ const projects = [
       "An attempt to mimic design located at  https://dribbble.com/shots/3860958-Forex-Trading-Landing using nothing but my eyes and skills.",
     technologies: "Design React",
     image: "https://i.ibb.co/qL68JvX/forex-Landing-Page.png",
-    gif: "https://gfycat.com/palewelloffamericanwigeon"
+    gif: "https://gfycat.com/palewelloffamericanwigeon",
+    gifPlay: "https://gfycat.com/ifr/PaleWelloffAmericanwigeon",
   },
   {
     features:
@@ -132,7 +141,8 @@ const projects = [
       "Lambda School 3 hour Sprint challenge to convert vanilla Javascript into a React application and pass data through props.",
     technologies: "React JavaScript",
     image: "https://i.ibb.co/0FDhKqF/lambda-Times.png",
-    gif: "https://gfycat.com/cheerynecessarycrownofthornsstarfish"
+    gif: "https://gfycat.com/cheerynecessarycrownofthornsstarfish",
+    gifPlay : "https://gfycat.com/ifr/CheeryNecessaryCrownofthornsstarfish",
   },
 
   {
@@ -145,7 +155,8 @@ const projects = [
       "A simple calendar application to practice skills learned in week 7 of Lambda School. This was not school related but practice to gain mastery in the topics. The application will allow one to move the year or the month and get the creat dates aligned on the application. I honestly didn't finish this application as I had desires to add tasks to certain date.",
     technologies: "moment  React JavaScript",
     image: "https://i.ibb.co/bP65FGf/simple-Calendar-App.png",
-    gif: "https://gfycat.com/mildcelebratedkomododragon"
+    gif: "https://gfycat.com/mildcelebratedkomododragon",
+    gifPlay: "https://gfycat.com/ifr/MildCelebratedKomododragon",
   },
 
   {
@@ -157,7 +168,8 @@ const projects = [
     description: "A simple to do list",
     technologies: "JavaScript React",
     image: "https://i.ibb.co/Kw4cykZ/simple-Tod-List.png",
-    gif: "https://gfycat.com/dimpledimperturbablehawk"
+    gif: "https://gfycat.com/dimpledimperturbablehawk",
+    gifPlay : "https://gfycat.com/ifr/DimpledImperturbableHawk"
   },
 
   {
@@ -170,7 +182,8 @@ const projects = [
       "This was a Sprint Challenge in which I had three hours to implement a solution to the problem. Please see the repo link. Fetching data and displaying as we saw fit.",
     technologies: "React JavaScript",
     image: "https://i.ibb.co/rmzQ6rm/react-Wars.png",
-    gif: "https://gfycat.com/lonelyunselfishdobermanpinscher"
+    gif: "https://gfycat.com/lonelyunselfishdobermanpinscher",
+    gifPlay: "https://gfycat.com/ifr/LonelyUnselfishDobermanpinscher"
   },
 
   {
@@ -183,7 +196,8 @@ const projects = [
       "A simple calculator application used at the beginning of learning how to use React to build components. This is from the React UI Components section of Lambda School.",
     technologies: "React JavaScript",
     image: "https://i.ibb.co/sgxBz5d/calculator-Components.png",
-    gif: "https://gfycat.com/wholetartiberianchiffchaff"
+    gif: "https://gfycat.com/wholetartiberianchiffchaff",
+    gifPlay : "https://gfycat.com/ifr/WholeTartIberianchiffchaff"
   },
 
   {
@@ -195,7 +209,8 @@ const projects = [
       "A social card used at the beginning of learning how to use React to build components. This is from the React UI Components section of Lambda School.",
     technologies: "React JavaScript",
     image: "https://i.ibb.co/T4TdMd5/social-Card.png",
-    gif: "https://gfycat.com/weirdtatteredflatcoatretriever"
+    gif: "https://gfycat.com/weirdtatteredflatcoatretriever",
+    gifPlay : "https://gfycat.com/ifr/WeirdTatteredFlatcoatretriever"
   }
 ];
 
