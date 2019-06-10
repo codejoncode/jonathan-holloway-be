@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
       tbl.increments()
       tbl.string("title").notNullable()
       tbl.text("message").notNullable()
+      tbl.string("image").notNullable()
   })
 };
 
