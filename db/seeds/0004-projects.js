@@ -1,5 +1,16 @@
 const projects = [
   {
+   image: "https://i.ibb.co/TgRjNp6/portofoilo-site.png",
+   githubUrl: "https://github.com/codejoncode/Jonathan-Holloway https://github.com/codejoncode/jonathan-holloway-be",
+   technologies: "FullStack Express Postgresql React Redux Semantic-UI",
+   title: "Portfolio",
+   deployUrl: "http://www.jonathanjholloway.com",
+   description: "This is a portfolio site to showcase the skills I have acquired through Lambda School and much practice. I have taken Udemy courses Codecademy.com courses datacamp.org courses and continue to practice and learn as much as I can. I can work on the frontend, backend or both. Like a lot of my side projects, I worked as a Lambda School Project Manager while implementing this site.",
+   gif : "https://gfycat.com/responsiblepeskycolt",
+   features: "React/Redux frontend, Semantic UI, Postgres backend, Blog, Email via Nodemailer, Downloadable resume, Lectures from Teaching Assistant role at Lambda School", 
+   gifPlay : "https://gfycat.com/ifr/ResponsiblePeskyColt"
+  },
+  {
     features:
       "Follow list, Ability to follow a user, Ability to unfollow a user, edit profile, Ability to invite a user to the forums, Search for a user signed up to the forum, Ability to change a users role on a team",
     plan: "https://trello.com/b/HIIPPoKb/labs-11-social-board-2",
