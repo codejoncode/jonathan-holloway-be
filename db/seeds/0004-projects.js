@@ -2,7 +2,7 @@ const projects = [
   {
    image: "https://i.ibb.co/TgRjNp6/portofoilo-site.png",
    githubUrl: "https://github.com/codejoncode/Jonathan-Holloway https://github.com/codejoncode/jonathan-holloway-be",
-   technologies: "FullStack Express Postgresql React Redux Semantic-UI",
+   technologies: "FullStack Node Postgresql React Redux Semantic-UI",
    title: "Portfolio",
    deployUrl: "http://www.jonathanjholloway.com",
    description: "This is a portfolio site to showcase the skills I have acquired through Lambda School and much practice. I have taken Udemy courses Codecademy.com courses datacamp.org courses and continue to practice and learn as much as I can. I can work on the frontend, backend or both. Like a lot of my side projects, I worked as a Lambda School Project Manager while implementing this site.",
@@ -20,7 +20,7 @@ const projects = [
       "https://github.com/labs11-social-board/labs11_social_boardFE, https://github.com/labs11-social-board/labs11_social_boardBE",
     description:
       "Symposium is a 5-week project where I worked with 4 other developers on an existing codebase to add functionality and features.",
-    technologies: "React Redux PostgreSql FullStack sql Express",
+    technologies: "React Redux PostgreSql FullStack Node",
     image: "https://i.ibb.co/SBzsBzw/Symposium.png",
     gif: "https://gfycat.com/zealousdecentandeancat",
     gifPlay: "https://gfycat.com/ifr/ZealousDecentAndeancat"
@@ -37,7 +37,7 @@ const projects = [
       "https://github.com/codejoncode/front-end-project-week, https://github.com/codejoncode/back-end-project-week",
     description:
       "Four-day frontend project designed to test the React and Redux skills learned at Lambda. The backend was later implemented after 4 weeks of studies with Lambda with another 4 days of work after assignment. This was my first full stack application.  Many features added on top of the original requirement. I had a lot of fun and perhaps realized this is the career I wanted during the creation of this project. ",
-    technologies: "JavaScript Express Redux FullStack sql",
+    technologies: "JavaScript Node Redux FullStack",
     image: "https://i.ibb.co/HgHYCyb/note-Taking-App.png",
     gif: "https://gfycat.com/hilariousanyarabianoryx",
     gifPlay: "https://gfycat.com/ifr/HilariousAnyArabianoryx",
@@ -53,7 +53,7 @@ const projects = [
       "https://github.com/codejoncode/LambdaMUD-Project, https://github.com/codejoncode/LambdaMUD-Client",
     description:
       "Another four-day project to test my knowledge of Python and Django at Lambda School. This is a full stack project with Django on the backend and React on the frontend.",
-    technologies: "python django JavaScript React FullStack sql",
+    technologies: "python django JavaScript React FullStack",
     image: "https://i.ibb.co/d2Np2cJ/lambda-Mud.png",
     gif: "https://gfycat.com/gloomyportlyincatern",
     gifPlay: "https://gfycat.com/ifr/GloomyPortlyIncatern"
@@ -67,7 +67,7 @@ const projects = [
     githubUrl: "https://github.com/codejoncode/lambda_treasure_hunt",
     description:
       "Lambda Treasure Hunt is a project with Django on the backend, and React on the frontend that illustrates graph traversal. Implemented the ability to travel to any given room using breadth-first search. Automated exploration to traverse the world and build a map. Map building Generate a graphical representation of the world map",
-    technologies: "React JavaScript bootstrap sigma Algorithms",
+    technologies: "React JavaScript bootstrap Algorithms",
     image: "https://i.ibb.co/5xv5cHX/Lambda-Treasure-Hunt.png",
     gif: "https://gfycat.com/singleweepyasp",
     gifPlay: "https://gfycat.com/ifr/SingleWeepyAsp",
@@ -81,7 +81,7 @@ const projects = [
     githubUrl: "https://github.com/codejoncode/HashHistoryBasketballLeague",
     description:
       "Application to go over React router and displaying components in React.",
-    technologies: "React  JavaScript",
+    technologies: "React JavaScript",
     image: "https://i.ibb.co/W03FZs5/basketball-League.png",
     gif: "https://gfycat.com/rewardingrepulsivegermanpinscher",
     gifPlay : "https://gfycat.com/ifr/RewardingRepulsiveGermanpinscher"
@@ -164,7 +164,7 @@ const projects = [
     githubUrl: "https://github.com/codejoncode/Calendar",
     description:
       "A simple calendar application to practice skills learned in week 7 of Lambda School. This was not school related but practice to gain mastery in the topics. The application will allow one to move the year or the month and get the creat dates aligned on the application. I honestly didn't finish this application as I had desires to add tasks to certain date.",
-    technologies: "moment  React JavaScript",
+    technologies: "moment React JavaScript",
     image: "https://i.ibb.co/bP65FGf/simple-Calendar-App.png",
     gif: "https://gfycat.com/mildcelebratedkomododragon",
     gifPlay: "https://gfycat.com/ifr/MildCelebratedKomododragon",
