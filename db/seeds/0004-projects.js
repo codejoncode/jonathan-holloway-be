@@ -5,7 +5,7 @@ const projects = [
    technologies: "FullStack Node Postgresql React Redux Semantic-UI",
    title: "Portfolio",
    deployUrl: "http://www.jonathanjholloway.com",
-   description: "This is a portfolio site to showcase the skills I have acquired through Lambda School and much practice. I have taken Udemy courses Codecademy.com courses datacamp.org courses and continue to practice and learn as much as I can. I can work on the frontend, backend or both. Like a lot of my side projects, I worked as a Lambda School Project Manager while implementing this site.",
+   description: "This is a portfolio site to showcase the skills I have acquired through Lambda School and much practice. I have taken Udemy courses Codecademy.com courses datacamp.org courses and continue to practice and learn as much as I can. I can work on the frontend, backend or both.",
    gif : "https://gfycat.com/responsiblepeskycolt",
    features: "React/Redux frontend, Semantic UI, Postgres backend, Blog, Email via Nodemailer, Downloadable resume, Lectures from Teaching Assistant role at Lambda School", 
    gifPlay : "https://gfycat.com/ifr/ResponsiblePeskyColt"
@@ -36,7 +36,7 @@ const projects = [
     githubUrl:
       "https://github.com/codejoncode/front-end-project-week, https://github.com/codejoncode/back-end-project-week",
     description:
-      "Four-day frontend project designed to test the React and Redux skills learned at Lambda. The backend was later implemented after 4 weeks of studies with Lambda with another 4 days of work after assignment. This was my first full stack application.  Many features added on top of the original requirement. I had a lot of fun and perhaps realized this is the career I wanted during the creation of this project. ",
+      "Four-day frontend project designed to test the React and Redux skills learned at Lambda. The backend was later implemented after 4 weeks of studies with Lambda with another 4 days of work after assignment. This was my first full stack application.  Many features added on top of the original requirement.",
     technologies: "JavaScript Node Redux FullStack",
     image: "https://i.ibb.co/HgHYCyb/note-Taking-App.png",
     gif: "https://gfycat.com/hilariousanyarabianoryx",
