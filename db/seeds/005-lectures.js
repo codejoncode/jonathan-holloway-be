@@ -9,6 +9,7 @@ exports.seed = function(knex, Promise) {
         { url: "https://www.youtube.com/embed/KWKR4tXLqW8", title: "Web Server Guided Project II" },
         { url: "https://www.youtube.com/embed/otxoIXgr6Tk", title: "Web Server Guided Project III" },
         { url: "https://www.youtube.com/embed/UH6QHhxB3TQ", title: "Web Server Guided Project IV" },
+        { url: "https://youtube.com/embed/0hxTxisL6oo", title: "CS14 After Hours Algorithms"},
       ]);
     });
 };
