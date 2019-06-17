@@ -11,6 +11,18 @@ const projects = [
    gifPlay : "https://gfycat.com/ifr/ResponsiblePeskyColt"
   },
   {
+    image: "https://i.ibb.co/5FPkQz4/fleek-session-landing-page.png",
+    plan: "https://trello.com/b/50RLXiA4/fleek-session",
+    technologies: "firebase Semantic-UI, React Redux FullStack",
+    title: "Fleek Session",
+    description: "An events app that allows users to sign up and post events. Other uses can chat about the event follow a user or join an event.",
+    features: "Auth 0 login,  Simple login/register, ability to create an event, ability to edit event, ability to cancel an event, ability for a user to join an event, Google places for choosing where an event is,  Google maps for viewing where an event is, Follow a user or unfollow, Edit Profile information, Upload photos, Redux Forms, Google Cloud functions, and more",
+    deployUrl: "https://the-events-app.firebaseapp.com/",
+    features : "Google Firebase  serverless backend, Google Cloud functions, Ability to review recent activity, Ability to follow / unfollow a user, Crud operations on events,  View Google Maps for location of event, Google places used when setting the location of an event,  Chat in real time regarding an event, Login via Auth0  Google and Facebook or as non-social media account, Redux Forms, Redux toastr notifications",
+    gif : "https://gfycat.com/frenchlividblackbear",
+    gifPlay: "'https://gfycat.com/ifr/FrenchLividBlackbear"
+  },
+  {
     features:
       "Follow list, Ability to follow a user, Ability to unfollow a user, edit profile, Ability to invite a user to the forums, Search for a user signed up to the forum, Ability to change a users role on a team",
     plan: "https://trello.com/b/HIIPPoKb/labs-11-social-board-2",
