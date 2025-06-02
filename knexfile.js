@@ -16,6 +16,7 @@ const dbConnection = process.env.DATABASE_URL || localPg;
 const dbSettings = {
   client:  'pg',
   connection: dbConnection,
+  ssl: false,
   pool: {
     min: 2,
     max: 10

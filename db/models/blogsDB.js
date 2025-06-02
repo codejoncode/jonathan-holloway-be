@@ -1,4 +1,4 @@
-const db = require("../../dbCongig");
+const db = require("../../dbConfig");
 
 /*So each  method will return the posts because I want to update the state on the frontend with the most current information */
 const getBlogPosts = () => {

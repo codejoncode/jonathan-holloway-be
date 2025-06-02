@@ -14,9 +14,9 @@ server.use(morgan('dev'));
 
 // const db = require('./config.js');  to access database  
 
-server.get("/", (req, res) => {
-  res.send(`WeB APP IS RUNNING...`);
-})
+// server.get("/", (req, res) => {
+//   res.send(`WeB APP IS RUNNING...`);
+// })
 
 //Routes/Endpoints 
 const {
@@ -40,3 +40,4 @@ server.use ("/projects", projectsRouter);
 server.use("/lectures", lecturesRouter);
 
 module.exports = server; 
+// node index.js

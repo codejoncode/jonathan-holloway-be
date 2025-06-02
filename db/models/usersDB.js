@@ -1,4 +1,4 @@
-const db = require('../../dbCongig');
+const db = require('../../dbConfig');
 
 const getUsers = () => {
     return db('users');
