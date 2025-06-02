@@ -7,13 +7,9 @@ const PORT = process.env.PORT || 4001;
 server.get("/", (req, res) => {
     res.send("Hello World")
   });
-const port = 4001
-server.listen(port, () => {
-    console.log (`Server is listening on port ${port}`);
-    console.log("Database URL:", process.env.DATABASE_URL);
-
-  db.raw('SELECT 1')
-    .then(() => console.log('Database connection is active'))
-    .catch(err => console.error('Database connection error:', err));
+// HAD TO USE 
+// const port = 4001;  // to get it to work locally
+server.listen(PORT, () => {
+    console.log (`Server is listening on port ${PORT}`);
 })
 // node index.js
